@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Service watchdog script
+# Service Watchdog Script
 # Put in crontab to automatially restart services (and optionally email you) if they die for some reason.
-# Note: You need to run this as root otherwise you won't be able to restart services.
+# Note: You need to run this as root otherwise you probably won't be able to restart services.
 #
 # Example crontab usage:
 #
@@ -12,7 +12,7 @@
 # "Loose" check for mysqld every 5 minutes, second parameter is the name of the service
 # to restart, in case the application and service names differ. Also emails a report to admin@domain.com
 # about the restart.
-# */5 * * * * sh /root/watchdog.sh mysqld mysql admin@domain.com > /dev/null
+# */5 * * * * sh /root/watchdog.sh mysqld mysql "" admin@domain.com > /dev/null
 
 # Common daemon names:
 # Apache:
