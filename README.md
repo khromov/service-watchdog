@@ -15,9 +15,13 @@ The script takes four parameters:
 Example crontab usage:
 
 Strict check for apache2 service every 5 minutes, pipe results to /dev/null
+```bash
 */5 * * * * sh /root/watchdog.sh apache2 "" -x > /dev/null
+```
  
 "Loose" check for mysqld every 5 minutes, second parameter is the name of the service
 to restart, in case the application and service names differ. Also emails a report to admin@domain.com
 about the restart.
+```bash
 */5 * * * * sh /root/watchdog.sh mysqld mysql "" admin@domain.com > /dev/null
+```
